@@ -20,7 +20,7 @@ const client = new MongoClient(mongoURI, {
 // MongoDB 클라이언트 연결
 client.connect((err) => {
   if (err) {
-    console.error("MongoDB 서버에 연결할 수 없습니다.");
+    console.error("MongoDB 서버에 연결할 수 없습니다."); //
     return;
   }
   console.log("MongoDB 서버에 연결되었습니다.");
