@@ -16,6 +16,14 @@ app.post("/post", (req,res) => {
   res.json({ title, name, text });
 });
 
+
+app.post("/posts", (req,res) => {
+  const { title, name, text } = req.body;
+
+  posts.push({ id: posts.length + 1, title, name, text, createdDt: Date() });
+  res.json({ title, name, text });
+});
+
 app.delete("/posts/:id", (req, res) => {
   const id = req.params.id;
   const filteredPosts = posts.filter((post) => post.id !== +id);
